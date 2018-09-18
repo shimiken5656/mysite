@@ -1,0 +1,37 @@
+流れ
+			register.php
+			↓
+			add.php会員登録
+			↓
+	login.php→index.php→logout.php
+			          	↓	↓
+			delete.php	edite.php
+			          		↓
+			          		update.php
+
+index2.phpでは性別の表示が可能になっている
+さらに、年月日が自動で着くようになっている
+
+員登録
+・遷移は「入力>確認>完了」の３ページ
+・確認画面から戻ることはできない
+・登録内容は、名前(テキスト),性別(ラジオボタン),生年月日(セレクトボックス),パスワード(おまかせ)
+・登録内容にバリデーションは一切つけない
+
+ログイン画面もこういう作りになると思われる
+バリデーションを消していく必要がある
+
+echo " <option value=\"".$i."\" selected>".$i."</option>\n";
+         //<option value="$i" selected="$i"></option>
+         という意味になる
+         ""（ダブルクォーテーション）の中にダブルクォーテーションを使うとエラーが表示される。そのため
+         エスケープシーケンスを行う必要がある
+
+https://www.imamura.biz/blog/9493
+https://doukigayameta.com/archives/566
+リファラー参照サイト
+         
+流れ、変更
+
+
+edite.php→update.phpの動きは、edite.php一つにまとめられた
